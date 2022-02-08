@@ -15,9 +15,8 @@ function newItem(){
 
  //2. Crossing out an item from the List
  li.on("dblclick", function crossOut() {
-   li.toggleClass("strike");
- });
-
+  li.toggleClass("strike");
+  });
 
  //3(i). Adding the delete button "X"
  let crossOutButton = $("<crossOutButton></crossOutButton>");
