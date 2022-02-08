@@ -14,16 +14,13 @@ function newItem(){
  }
 
  //2. Crossing out an item from the List
- function crossOut() {
-   li.addClass("strike");
- }
+ li.on("dblclick", function crossOut() {
+   li.toggleClass("strike");
+ });
 
-li.on("dblclick", function crossOut() {
-  li.addClass("strike");
-})
 
  //3(i). Adding the delete button "X"
- let crossOutButton = $("crossOutButton");
+ let crossOutButton = $("<crossOutButton></crossOutButton>");
  crossOutButton.append(document.createTextNode('X'))
  li.append(crossOutButton);
 
